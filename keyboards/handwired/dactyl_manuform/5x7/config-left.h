@@ -1,5 +1,6 @@
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
+Copyright 2015 Jack Humbert
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,13 +16,27 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
 #pragma once
 
+#include "config_common.h"
 
-#define USE_SERIAL
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
-//#define EE_HANDS
+#define PRODUCT         Dactyl-Manuform (Ergodox)
+
+/* key matrix size */
 // Rows are doubled-up
+#define MATRIX_ROWS 10
+#define MATRIX_COLS 7
+
+#define DIODE_DIRECTION COL2ROW
+
+// WS2812 RGB LED strip input and number of LEDs
+#define RGBLED_NUM 10
+#define RGBLED_SPLIT 5
+#define RGBLIGHT_SPLIT
+#define RGBLIGHT_MODE_BREATHING
+#define RGBLIGHT_MODE_RAINBOW_MOOD
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#define RGBLIGHT_LAYERS

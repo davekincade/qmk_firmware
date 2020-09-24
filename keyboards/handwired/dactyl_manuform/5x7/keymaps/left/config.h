@@ -1,6 +1,5 @@
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2015 Jack Humbert
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -16,31 +15,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+
 #pragma once
 
-#include "config_common.h"
 
+#define USE_I2C
 
-#define PRODUCT         Dactyl-Manuform (Jessica)
-#define VENDOR_ID 0xF00D
-#define PRODUCT_ID 0x0001
-#define DEVICE_VER      0x0001
-
-/* key matrix size */
+#define MASTER_RIGHT
+// #define MASTER_RIGHT
+//#define EE_HANDS
 // Rows are doubled-up
-#define MATRIX_ROWS 10
-#define MATRIX_COLS 7
 
-#define DIODE_DIRECTION COL2ROW
-
-// WS2812 RGB LED strip input and number of LEDs
-#undef RGBLED_NUM
-#define RGBLED_NUM 9
-#define RGBLED_SPLIT { 4, 5 }
-#define RGBLIGHT_SPLIT
-#define RGBLIGHT_MODE_BREATHING
-#define RGBLIGHT_MODE_RAINBOW_MOOD
-// #define RGBLIGHT_EFFECT_BREATHING
-// #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-// #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-#define RGBLIGHT_LAYERS
+#define MATRIX_COL_PINS { B3, B1, F7, F6, F5, F4 }
+#define MATRIX_ROW_PINS { E6, D7, C6, D4, B4 }
+#define RGB_DI_PIN B2
