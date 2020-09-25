@@ -1,1 +1,1 @@
-BOOTLOADER = qmk-dfu
+BOOTLOADER=dfu

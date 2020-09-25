@@ -20,27 +20,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-
-#define PRODUCT         Dactyl-Manuform (Jessica)
-#define VENDOR_ID 0xF00D
-#define PRODUCT_ID 0x0001
-#define DEVICE_VER      0x0001
-
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 7
 
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
+
+/* USB Device descriptor parameter */
+#define VENDOR_ID 0xFEED
+#define PRODUCT_ID 0x3062
+#define DEVICE_VER 0x0001
+#define MANUFACTURER dkincade
+#define PRODUCT Track Beast
+#define DESCRIPTION 4x6 Dactyl manuform + trackball
 
 // WS2812 RGB LED strip input and number of LEDs
 #undef RGBLED_NUM
-#define RGBLED_NUM 9
-#define RGBLED_SPLIT { 4, 5 }
+#define RGBLED_NUM 10
+#define RGBLED_SPLIT { 5, 5 }
 #define RGBLIGHT_SPLIT
+#define RGBLIGHT_SLEEP
 #define RGBLIGHT_MODE_BREATHING
 #define RGBLIGHT_MODE_RAINBOW_MOOD
+#define RGBLIGHT_MODE_RAINBOW_SWIRL
+// #define RGBLIGHT_ANIMATIONS
 // #define RGBLIGHT_EFFECT_BREATHING
 // #define RGBLIGHT_EFFECT_RAINBOW_MOOD
 // #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 #define RGBLIGHT_LAYERS
+
+// #define DEBOUNCE 5
